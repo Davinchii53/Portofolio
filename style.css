@@ -70,7 +70,8 @@ img {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .section {
@@ -167,12 +168,16 @@ img {
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
+    padding: 0 5%;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Tambahan padding internal */
 }
 
 .nav-logo {
@@ -239,14 +244,18 @@ img {
 }
 
 .home-container {
+    width: 100%;
+    max-width: 1200px; /* Lebar maksimum */
+    margin: 0 auto; /* Pusatkan horizontal */
+    padding: 0 20px; /* Padding kiri-kanan */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
 }
 
 .home-content {
     max-width: 600px;
+    margin-right: 40px;
 }
 
 .home-content h4 {
@@ -868,11 +877,11 @@ footer p {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 992px) {
-    .home-container,
-    .about-content {
+@media (max-width: 768px) {
+    .home-container {
         flex-direction: column;
         text-align: center;
+        padding: 0 15px;
     }
     
     .home-image,
